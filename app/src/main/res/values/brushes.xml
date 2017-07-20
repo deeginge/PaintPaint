@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smallBrush">11dp</dimen>
+    <integer name="smallSize">11</integer>
+    <dimen name="mediumBrush">15dp</dimen>
+    <integer name="mediumSize">15</integer>
+    <dimen name="largeBrush">20dp</dimen>
+    <integer name="largeSize">20</integer>
+    <dimen name="efficientBrush">50dp</dimen>
+    <integer name="efficientSize">50</integer>
+    <dimen name="tremendousBrush">100dp</dimen>
+    <integer name="tremendousSize">100</integer>
+</resources>
