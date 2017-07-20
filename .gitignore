@@ -53,8 +53,10 @@ google-services.json
 # Freeline
 freeline.py
 freeline/
+.idea/modules.xml
 <<<<<<< HEAD
 freeline_project_description.json
 =======
 freeline_project_description.json
 >>>>>>> 78dea974d5cffd3fbf6fc0534bc385aea5915319
+
