@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 
 public class MainActivity extends AppCompatActivity {
-
+    Paint p = new Paint();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +21,13 @@ public class MainActivity extends AppCompatActivity {
         Bitmap bm = Bitmap.createBitmap(width, height, conf);
 
         Canvas canvas = new Canvas(bm);
-        Paint p = new Paint();
         p.setColor(0xff00ff);
         canvas.drawCircle(canvas.getWidth()/2, canvas.getHeight()/2, 50, p );
 
 
+    }
+    public void changeBrushColor(String hex){
+        int hexValue = Integer.decode(hex);
+        p.setColor(hexValue);
     }
 }
