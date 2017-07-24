@@ -1,14 +1,12 @@
 package club.fdr.paintpaint;
 
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Display;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.SeekBar;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,23 +16,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-
+    private final int minBrushSize = 10;
+    private final int maxBrushSize = 10;
+    private SeekBar brushSizeSeekBar;
+    private ImageButton clear;
+    private ImageButton newFile;
+    private ImageButton brushToggleColor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Display display = getWindowManager().getDefaultDisplay();
-
-        int width = display.getWidth(), height = display.getHeight();
-        Bitmap.Config conf = Bitmap.Config.ARGB_8888;
-        Bitmap bm = Bitmap.createBitmap(width, height, conf);
-
-        Canvas canvas = new Canvas(bm);
-        Paint p = new Paint();
-        p.setColor(0xff00ff);
-        canvas.drawCircle(canvas.getWidth()/2, canvas.getHeight()/2, 50, p );
-
+        brushSizeSeekBar = (SeekBar)findViewById(R.id.brushSizeSeekBar);
+        clear = (ImageButton)findViewById(R.id.eraser);
+        newFile = (ImageButton)findViewById(R.id.newPaint);
+        brushToggleColor = (ImageButton)findViewById(R.id.brushColorToggle);
+        
 
     }
 
