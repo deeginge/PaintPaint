@@ -86,4 +86,12 @@ public class Easel extends View {
         return true;
     }
 
+    public Canvas getDrawCanvas(){
+        return drawCanvas;
+    }
+
+    public Bitmap getCanvasBitmap(){
+        return canvasBitmap;
+    }
+
 }
