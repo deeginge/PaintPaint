@@ -17,7 +17,7 @@ import android.view.MotionEvent;
 public class Easel extends View {
     private Path drawPath;
     private Paint drawPaint, canvasPaint;
-    private int paintColor = 0xFF660000;
+    private int paintColor = 0xFF225500;
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
 
