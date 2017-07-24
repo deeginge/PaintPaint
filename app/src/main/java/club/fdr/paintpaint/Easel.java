@@ -27,6 +27,10 @@ public class Easel extends View {
         setupDrawing();
     }
 
+    public Paint getDrawPaint() {
+        return drawPaint;
+    }
+
     private void setupDrawing() {
         //Get drawing area setup for interaction
         drawPath = new Path();//TODO What is path?
