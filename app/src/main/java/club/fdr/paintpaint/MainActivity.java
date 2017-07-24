@@ -1,6 +1,7 @@
 package club.fdr.paintpaint;
 
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton clear;
     private ImageButton newFile;
     private ImageButton brushToggleColor;
+    private Easel easel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         clear = (ImageButton)findViewById(R.id.eraser);
         newFile = (ImageButton)findViewById(R.id.newPaint);
         brushToggleColor = (ImageButton)findViewById(R.id.brushColorToggle);
-        
+        easel = (Easel)findViewById(R.id.easel);
+
 
     }
 
@@ -39,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Clear(View view){
 
+        easel.getDrawCanvas().drawColor(Color.WHITE);
+
     }
     public void Save(View view){
-        Easel easel = (Easel)findViewById(R.id.easel);
-
         storeImage(easel.getCanvasBitmap());
     }
 
