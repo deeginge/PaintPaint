@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.SeekBar;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,7 +18,6 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     private final int minBrushSize = 10;
     private final int maxBrushSize = 10;
-    private SeekBar brushSizeSeekBar;
     private ImageButton clear;
     private ImageButton newFile;
     private ImageButton brushToggleColor;
@@ -28,18 +26,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        brushSizeSeekBar = (SeekBar)findViewById(R.id.brushSizeSeekBar);
         clear = (ImageButton)findViewById(R.id.eraser);
         newFile = (ImageButton)findViewById(R.id.newPaint);
         brushToggleColor = (ImageButton)findViewById(R.id.brushColorToggle);
         easel = (Easel)findViewById(R.id.easel);
 
-
     }
 
-    public void New(View view){
-
+    public void brushSizeClicked(View view){
+        float size = Float.parseFloat((String)(view.getTag()));
+        Log.e("brush width", "" + size);
+        easel.setBrushSize(size);
     }
+
     public void Clear(View view){
 
         easel.getDrawCanvas().drawColor(Color.WHITE);

@@ -29,7 +29,7 @@ public class Easel extends View {
 
     private void setupDrawing() {
         //Get drawing area setup for interaction
-        drawPath = new Path();//TODO What is path?
+        drawPath = new Path();
         drawPaint = new Paint();
 
         drawPaint.setColor(paintColor);
@@ -43,6 +43,9 @@ public class Easel extends View {
         canvasPaint = new Paint(Paint.DITHER_FLAG);
 
 
+    }
+    public void setBrushSize(float size){
+        drawPaint.setStrokeWidth(size);
     }
 
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {

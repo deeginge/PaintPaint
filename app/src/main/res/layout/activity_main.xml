@@ -71,21 +71,45 @@
         android:layout_height="132dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/easel"
         app:layout_constraintRight_toRightOf="@+id/easel"
         app:layout_constraintTop_toBottomOf="@+id/easel">
 
-        <SeekBar
-            android:id="@+id/brushSizeSeekBar"
-            style="@android:style/Widget.Material.Light.SeekBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:max="10"
-            android:progress="3" />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="brushSizeClicked"
+            android:tag="10"
+            android:text="10"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="brushSizeClicked"
+            android:tag="20"
+            android:text="20"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="brushSizeClicked"
+            android:tag="30"
+            android:text="30"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="brushSizeClicked"
+            android:tag="40"
+            android:text="40"/>
+
+        <Button
+            android:onClick="brushSizeClicked"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tag="50"
+            android:text="50"/>
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>
-
